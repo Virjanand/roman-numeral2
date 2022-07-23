@@ -16,7 +16,7 @@ public class RomanNumber {
             counter -= tens * 10;
         }
         if (counter == 9) {
-            return "IX";
+            return result + "IX";
         }
         if (counter / 5 > 0) {
             result += "V";
