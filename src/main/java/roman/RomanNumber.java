@@ -8,15 +8,15 @@ public class RomanNumber {
     }
 
     public String toRoman() {
-        if (arabicNumber == 6) {
-            return "VI";
+        int counter = arabicNumber;
+        String result = "";
+        if (counter / 5 > 0) {
+            result += "V";
+            counter -= 5;
         }
-        if (arabicNumber == 5) {
-            return "V";
-        }
-        if (arabicNumber == 4) {
+        if (counter == 4) {
             return "IV";
         }
-        return "I".repeat(arabicNumber);
+        return result + "I".repeat(counter);
     }
 }
