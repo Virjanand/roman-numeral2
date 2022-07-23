@@ -8,6 +8,9 @@ public class RomanNumber {
     }
 
     public String toRoman() {
+        if (arabicNumber == 5) {
+            return "V";
+        }
         if (arabicNumber == 4) {
             return "IV";
         }
