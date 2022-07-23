@@ -9,7 +9,8 @@ public class RomanNumberTest {
 
     @ParameterizedTest(name = "{0} -> {1}")
     @CsvSource({
-            "1, I"
+            "1, I",
+            "2, II",
     })
     void convertArabicToRoman(int arabicNumer, String expectedRomanString) {
         RomanNumber romanNumber = new RomanNumber(arabicNumer);
