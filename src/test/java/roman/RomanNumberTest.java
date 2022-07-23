@@ -18,6 +18,7 @@ public class RomanNumberTest {
             "10, X",
             "14, XIV",
             "19, XIX",
+            "40, XL",
     })
     void convertArabicToRoman(int arabicNumer, String expectedRomanString) {
         RomanNumber romanNumber = new RomanNumber(arabicNumer);
