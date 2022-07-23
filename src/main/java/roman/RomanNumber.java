@@ -1,10 +1,17 @@
 package roman;
 
 public class RomanNumber {
-    public RomanNumber(int i) {
+    private int arabicNumber;
+
+    public RomanNumber(int arabicNumber) {
+        this.arabicNumber = arabicNumber;
     }
 
     public String toRoman() {
-        return "I";
+        if (arabicNumber == 1) {
+            return "I";
+        }
+        return "II";
+
     }
 }
