@@ -1,14 +1,18 @@
 package roman;
 
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class RomanNumberTest {
 
-    @Test
-    void convert1ToI() {
-        RomanNumber romanNumber = new RomanNumber(1);
-        assertThat(romanNumber.toRoman()).isEqualTo("I");
+    @ParameterizedTest(name = "{0} -> {1}")
+    @CsvSource({
+            "1, I"
+    })
+    void convertArabicToRoman(int arabicNumer, String expectedRomanString) {
+        RomanNumber romanNumber = new RomanNumber(arabicNumer);
+        assertThat(romanNumber.toRoman()).isEqualTo(expectedRomanString);
     }
 }
