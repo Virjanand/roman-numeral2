@@ -10,8 +10,9 @@ public class RomanNumber {
     public String toRoman() {
         int counter = arabicNumber;
         String result = "";
-        if (counter == 40) {
-            return "XL";
+        if (counter / 40 > 0) {
+            result += "XL";
+            counter -= 40;
         }
         int tens = counter / 10;
         if (tens > 0) {
